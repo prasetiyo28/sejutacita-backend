@@ -1,0 +1,43 @@
+version: "3.2"
+services:
+  nodejs:
+    build: ./
+    ports:
+      - 3000:3000
+    depends_on :
+      - db
+      - redis
+    image: prasetiyo28/backend-sejutacita
+    environment :
+      NODE_ENV : "local"      
+      PORT : 3000
+    networks : 
+      - connection-bridge
+    command: ["./wait-for-it.sh", "redis:6379", "--", "node", "index.js"]
+  db:
+    image: mysql
+    environment :
+      DATABASE_HOST : "localhost"
+      DATABASE_PORT : 14045
+      DATABASE_USER : "root"
+      DATABASE_PASSWORD : 
+      DATABASE_NAME : "sejutacita"
+    ports:
+      - 14045:14045
+    networks : 
+      - connection-bridge
+  redis:
+    image: redis
+    environment :
+      REDIS_HOST : "redis"
+      REDIS_PORT : 6379
+      REDIS_PASSWORD:
+    ports:
+      - 6379:6379
+    expose:
+      - 6379
+    networks : 
+      - connection-bridge
+networks:
+    connection-bridge:
+          driver: bridge
