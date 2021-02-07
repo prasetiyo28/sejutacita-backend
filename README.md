@@ -1,4 +1,4 @@
-# Finance Backend API - Paper . id
+# Backend API - Sejutacita . id
 Rest Api Service Backend dibangun menggunakan NodeJS(ExpressJS) , MySql dan Redis sebaga data storage
 
 ## Requirement
@@ -25,6 +25,3 @@ testing with mocha chai and instanbull nyc coverage
 
 ## Running
 >$ npm run start-dev
-
-## OpenAPI documentation
-> [Link Documentation](https://app.swaggerhub.com/apis-docs/prasetiyo28/paper-backend-api/1.0.0http:// "Link Documentation")
