@@ -1,0 +1,11 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+app/models/
+app/helpers/validation.js
+app/seeders/
+log/
+node_modules/
+bin/

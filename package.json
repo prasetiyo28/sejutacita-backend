@@ -1,0 +1,56 @@
+{
+  "name": "backend-sejutacita.id",
+  "version": "1.0.0",
+  "description": "Test on sejutacitaid",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^3.2.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "express": "^4.17.1",
+    "express-request-id": "^1.4.1",
+    "express-validator": "^6.6.0",
+    "fast-json-parse": "^1.0.3",
+    "fast-safe-stringify": "^2.0.7",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.19",
+    "md5": "^2.3.0",
+    "mocha": "^8.0.1",
+    "moment": "^2.27.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "node-redis-scan": "^1.2.1",
+    "nodemon": "^2.0.4",
+    "nyc": "^15.1.0",
+    "path": "^0.12.7",
+    "redis": "^3.0.2",
+    "sequelize": "^5.22.3",
+    "www": "0.0.0",
+    "x-xss-protection": "^1.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  },
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "mocha ./test/index.test.js --timeout 20000 --exit",
+    "start-dev": "NODE_ENV=development node_modules/.bin/nodemon bin/www --exec \"npm run lint && node\"",
+    "lint": "node_modules/.bin/eslint app/ --fix",
+    "coverage": "nyc npm run test"
+  },
+  "keywords": [
+    "nodeJS",
+    "Express"
+  ],
+  "author": "Bayu Adi Prasetiyo",
+  "license": "ISC"
+}
