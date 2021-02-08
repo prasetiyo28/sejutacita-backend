@@ -1,12 +1,14 @@
 FROM node:stretch-slim
 
-WORKDIR .
+WORKDIR /app
 
 COPY package*.json ./
 
 RUN npm install
 
+RUN npm install -g sequelize-cli
+
+
 COPY . .
-COPY wait-for-it.sh .
 EXPOSE 3000
 CMD ["npm","run", "start"]

@@ -9,6 +9,7 @@ module.exports = {
         username: 'admin_sejutacita',
         email: 'admin@sejutacita.id',
         password: bcrypt.hashSync('admin', 10),
+        id_role: 2,
         createdAt: new Date(),
         updatedAt: new Date()
       }], {});
