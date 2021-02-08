@@ -16,6 +16,11 @@ Rest Api Service Backend dibangun menggunakan NodeJS(ExpressJS) , MySql dan Redi
 > $ sequelize db:seed:all
 * if error "sequelize command not found" install sequelize cli with this command :
 > $ npm install -g sequelize-cli
+
+- run the backend service on minikube with
+> $ minikube service backend
+
+you will get a port to access the API 
     
 
 # Local Running
@@ -43,3 +48,12 @@ config .env with your data
 
 
 
+# Credential to Login
+- username : admin_sejutacita or admin@sejutacita.id
+- password : admin
+
+# Postman Collection :
+Download Postman Collection [here](https://raw.githubusercontent.com/prasetiyo28/sejutacita-backend/main/SEJUTACITA.postman_collection.json)
+
+# Diagram Flow
+![diagram flow](https://raw.githubusercontent.com/prasetiyo28/sejutacita-backend/main/flowchart.jpg)
